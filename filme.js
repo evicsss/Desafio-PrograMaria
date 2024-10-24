@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+const cors = require('cors')
 
 const conectaBancoDeDados = require('./bancoDeDados')
 conectaBancoDeDados()
@@ -8,6 +9,8 @@ const Filmes = require('./filmeModel')
 
 const app = express()
 app.use(express.json())
+app.use(cors())
+
 const porta = 3333
 
 async function mostraFilme(request, response) {
