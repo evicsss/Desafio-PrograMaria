@@ -119,19 +119,19 @@ export function Content() {
           <textarea 
             onChange={handleInputValueSinopse} 
             placeholder="Digite a sinopse"
-            value={minibio}
+            value={sinopse}
             className={styles.formTextArea}
           />
           <textarea 
             onChange={handleInputValueAutor} 
             placeholder="Digite o autor"
-            value={citacao}
+            value={autor}
             className={styles.formTextArea}
           />
            <textarea 
             onChange={handleInputValueAno} 
             placeholder="Digite o ano"
-            value={citacao}
+            value={ano}
             className={styles.formTextArea}
           />
           <button className={styles.formButton} type="submit">Enviar mensagem</button>
