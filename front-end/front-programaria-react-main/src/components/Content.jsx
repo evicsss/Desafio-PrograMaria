@@ -29,7 +29,7 @@ export function Content() {
     setNome(event.target.value)
   }
 
-  function handleInputValuAutor(event) {
+  function handleInputValueAutor(event) {
     setAutor(event.target.value)
   }
 
