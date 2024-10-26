@@ -1,26 +1,51 @@
 .headerContainer {
-  padding: 6rem;
-  background: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 4rem
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in;
+  z-index: 1000;
 }
 
-.headerTitle {
-  color: #ffffff;
-  font-size: 4rem;
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 
-.headerSubtitle {
-  color: #ffffff;
-  font-size: 1.6rem;
-  font-weight: lighter;
+.logo {
+  height: 40px;
+  cursor: pointer;
 }
 
-.headerImage {
-  width: 30%;
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #b3b3b3;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media(max-width: 765px) {

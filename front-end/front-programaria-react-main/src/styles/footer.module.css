@@ -1,12 +1,28 @@
 .footerContainer {
   padding: 2rem;
-  background: #000000;
+  background: #ff7300; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .footerText {
-  color: #ff0000;
+  color: #020000; 
   font-size: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.socialLinks {
+  display: flex; 
+  gap: 20px; 
+}
+
+.socialLink {
+  color: #020000; 
+  text-decoration: none;
+  transition: color 0.3s; 
+}
+
+.socialLink:hover {
+  color: #fff;
 }

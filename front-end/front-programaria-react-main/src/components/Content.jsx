@@ -74,7 +74,7 @@ export function Content() {
   return (
     <>
       <Header
-        title='FlixProgramaria'
+        title='MariaMovie'
         subtitle='Os melhores filmes brasileiros'
         image={listaImg}
       />
@@ -135,7 +135,7 @@ export function Content() {
             className={styles.formTextArea}
           />
           <button className={styles.formButton} type="submit">Enviar mensagem</button>
-          {success && <p>Parabéns! Cadastro realizado com sucesso! </p>}
+          {success && <p>Uhu! Cadastro realizado com sucesso! </p>}
         </form>
       </div>
       <Footer />
