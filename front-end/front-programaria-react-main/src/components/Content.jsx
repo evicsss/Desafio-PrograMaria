@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import listaImg from '../assets/lista.svg'
 import { Header } from './Header.jsx'
 import { Footer } from './Footer.jsx'
+
 
 import Axios from 'axios'
 
@@ -74,10 +74,14 @@ export function Content() {
   return (
     <>
       <Header
-        title='MariaMovie'
-        subtitle='Os melhores filmes brasileiros'
-        image={listaImg}
       />
+
+    <section className={styles.informationSection}>
+      <h1 className={styles.informationTitle}>Cadastre seus filmes preferidos e encontre novas inspirações!</h1>
+      <p className={styles.informationText}>
+      Maria Movie é o lugar perfeito para quem quer compartilhar e descobrir filmes que fazem a diferença na vida de quem ama tecnologia. Neste espaço, cada usuário tem a liberdade de cadastrar seus filmes preferidos, contribuindo para uma rede de recomendações que cresce a cada dia. Junte-se a essa comunidade vibrante e ajude a inspirar outros desenvolvedores e amantes da tecnologia a explorar novas histórias e perspectivas. Cadastre seu filme favorito e faça parte de uma experiência cinematográfica única, onde cada indicação é uma nova inspiração!
+      </p>
+    </section>
       <div className={styles.projectsContainer}>
         <div className={styles.projectsContainer}>
           <div className={styles.cardsRepoContainer}>
@@ -102,17 +106,17 @@ export function Content() {
         </div>
       </div>
       <div >
-        <h2 className={styles.projectsTitle}>Cadastre um filme:</h2>
+        <h2 className={styles.projectsTitle}>Contribua com um filme:</h2>
         <form  className={styles.form} onSubmit={handleCreateMessage}>
           <input 
             onChange={handleInputValueNome} 
-            placeholder="Digite o nome"
+            placeholder="Digite o nome do filme"
             value={nome}
             className={styles.formInput}
           />
           <textarea 
             onChange={handleInputValueImagem} 
-            placeholder="Digite o link da imagem"
+            placeholder="Digite o endereço da imagem"
             value={imagem}
             className={styles.formTextArea}
           />
@@ -124,18 +128,18 @@ export function Content() {
           />
           <textarea 
             onChange={handleInputValueAutor} 
-            placeholder="Digite o autor"
+            placeholder="Digite o diretor"
             value={autor}
             className={styles.formTextArea}
           />
            <textarea 
             onChange={handleInputValueAno} 
-            placeholder="Digite o ano"
+            placeholder="Digite o ano do lançamento"
             value={ano}
             className={styles.formTextArea}
           />
-          <button className={styles.formButton} type="submit">Enviar mensagem</button>
-          {success && <p>Uhu! Cadastro realizado com sucesso! </p>}
+          <button className={styles.formButton} type="submit">Cadastrar Filme</button>  
+          {success && <p>Cadastrado com sucesso! Obrigado por sua contribuição!</p>}
         </form>
       </div>
       <Footer />

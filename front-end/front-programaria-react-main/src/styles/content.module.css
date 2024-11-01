@@ -1,41 +1,85 @@
+body {
+  background-image: url('https://i.pinimg.com/564x/b8/5e/2a/b85e2a5f7f48b3d21ae270eec316db3d.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
 .projectsContainer {
   width: 100%;
-  color: #000000;
   text-align: center;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .projectsTitle {
-  padding-top: 4rem;
-  font-size: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
   color: #000000;
-  text-align:center
+  justify-content: center;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.titleContainer {
+  text-align: center;
+  background-color: #000000;
+}
+
+.informationSection {
+  padding: 5rem 2rem;  
+  text-align: center;
+  margin-top: 5rem; 
+}
+
+.informationTitle {
+  padding: 5px;
+  font-size: 2rem; 
+  color: #000000; 
+}
+
+.informationText {
+  font-size: 1rem; 
+  color: #000000; 
+  margin-bottom: 1rem; 
+}
+
+.informationList {
+  list-style: none; 
+  padding: 0; 
+}
+
+.informationList li {
+  font-size: 1rem; 
+  color: #3c06ff; 
+  margin-bottom: 0.5rem;
 }
 
 .cardsContainer {
-  margin: 0 auto;
-  width: 80%;
-  padding: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 3rem;
-  font-size: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 30%;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  font-size: 1.2rem;
+position: relative;
+display: -webkit-box;
+display: flex;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
 }
 
 .cardImage {
   width: 100%;
+  vertical-align: middle;
+  border-style: none;
 }
-
 
 .cardsRepoContainer {
   display: flex;
@@ -43,51 +87,56 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap: 3rem;
+  gap: 2rem;
   padding: 2rem;
 }
 
 .cardRepo {
-  background: #ff0000;
-  width: 30%;
-  height: 80%;
-  padding: 2rem;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: calc(25% - 2rem);
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgb(0, 0, 0);
   text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cardRepo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .cardRepoSummary{
-  color: #fff;
+  color: #000000;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1.5rem 1rem;
 }
 
 .cardRepoText {
-  color: #fff;
-  text-overflow: "…";
-  font-size: 1.2rem;
-  font-weight: lighter;
-  padding: 1rem;
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .cardRepoImage {
-  border-radius: 100%;
-  width: 70%;
+  width: 100%;
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 .cardRepoQuote {
-  color: #fff;
+  color: #000000;
   font-style: italic;
-  font-weight: lighter;
 }
 
 .removeTask {
-  color: #000;
+  color: #ffffff;
   width: 10%;
   height: 10%;
   text-align: center;
@@ -101,24 +150,6 @@
   align-items: center;
 }
 
-@media(max-width: 765px) {
-  .cardsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card {
-    width: 320px;
-  }
-
-  .cardRepo {
-    width: 3200px;
-  }
-
-}
-
 .formContainer {
   width: 100%;
   text-align: center;
@@ -126,42 +157,43 @@
 
 .form {
   margin: 0 auto;
-  border-radius: 4px;
-  width: 80%;
-  height: 600px;
+  border-radius: 10px;
+  width: 50%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.479); 
+
 }
 
 .formInput {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width: 80%;
   padding: 12px 32px;
-  border: 1px solid #ff0000;
+  border: 1px solid #000000;
   border-radius: 4px;
-  resize: vertical;
   margin-bottom: 1rem;
 }
 
 .formTextArea {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width: 80%;
   padding: 12px 32px;
-  border: 1px solid #ff0000;
+  border: 1px solid #000000;
   border-radius: 4px;
-  resize: vertical;
   margin-bottom: 1rem;
 }
 
 
 .formButton {
-  background-color: #000000;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0);
+  background-color: #ff0000d8;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 12px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin-top: 1rem;
   width: 80%;
@@ -170,5 +202,24 @@
 }
 
 .formButton:hover {
-  background-color: rgb(190, 34, 34);
+  background-color: rgb(255, 0, 0);
 }
+
+@media (max-width: 1024px) {
+  .cardRepo {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (max-width: 765px) {
+  .cardRepo {
+    width: calc(50% - 2rem); 
+  }
+}
+
+@media (max-width: 480px) {
+  .cardRepo {
+    width: 100%; 
+  }
+}
+
